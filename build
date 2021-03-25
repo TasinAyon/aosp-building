@@ -5,7 +5,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch dot_j4primelte-userdebug
+lunch nad_j4primelte-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -26,10 +26,11 @@ make_metalava(){
 }
 
 make_rom(){
-                make bacon -j16
+                mka nad -j16
 		zip=$(up out/target/product/j4primelte/*zip)
 		echo " "
 		echo "$zip"
 }
 make_metalava
-make_rom
+make_rom &
+sleep 4140 && kill "$!" #this is a 1:20 hours timeout
