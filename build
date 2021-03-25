@@ -5,7 +5,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch nad_j4primelte-userdebug
+lunch nad_j6primelte-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -20,17 +20,15 @@ up(){
 
 make_metalava(){
 	make api-stubs-docs
-	make hiddenapi-lists-docs
 	make system-api-stubs-docs
 	make test-api-stubs-docs
 }
 
 make_rom(){
                 mka nad -j16
-		zip=$(up out/target/product/j4primelte/*zip)
+		zip=$(up out/target/product/j6primelte/*zip)
 		echo " "
 		echo "$zip"
 }
 make_metalava
-make_rom &
-sleep 4140 && kill "$!" #this is a 1:20 hours timeout
+make_rom
