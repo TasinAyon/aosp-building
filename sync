@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MANIFEST=git://github.com/crdroidandroid/android.git
+MANIFEST=git://github.com/nnippon/android.git
 BRANCH=11.0
 
 mkdir -p /tmp/rom
