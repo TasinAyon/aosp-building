@@ -30,5 +30,5 @@ make_rom(){
 		echo " "
 		echo "$zip"
 }
-make_metalava
+# make_metalava
 make_rom
