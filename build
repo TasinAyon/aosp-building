@@ -25,10 +25,10 @@ make_metalava(){
 }
 
 make_rom(){
-                brunch j4primelte
+                mka bacon -j12
 		zip=$(up out/target/product/j4primelte/*zip)
 		echo " "
 		echo "$zip"
 }
-# make_metalava
+make_metalava
 make_rom
