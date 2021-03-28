@@ -18,6 +18,6 @@ time wget $url || time wget $url
 time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50
 
 wget https://server.nippon.workers.dev/ccache/nippa/ccache.tar.gz -O a.tar.gz
-time tar xf ccache.tar.gz
+time tar xf a.tar.gz
 echo "Extracted!"
 find ccache.tar.gz -delete
