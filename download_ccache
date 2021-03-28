@@ -10,14 +10,11 @@ url=https://server.nippon.workers.dev/ccache/nippa/ccache.crdroid.tar.gz
 
 cd /tmp # Where to download cccahe
 sudo apt install wget -y
-apt install wget -y
-aria2c https://server.nippon.workers.dev/ccache/nippa/ccache.tar.gz
+
+time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50
+wget https://server.nippon.workers.dev/ccache/nippa/ccache.tar.gz -O a.tar.gz
 echo "Downloaded!"
 
-time wget $url || time wget $url
-time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50
-
-wget https://server.nippon.workers.dev/ccache/nippa/ccache.tar.gz -O a.tar.gz
 time tar xf a.tar.gz
 echo "Extracted!"
-find ccache.tar.gz -delete
+find a.tar.gz -delete
