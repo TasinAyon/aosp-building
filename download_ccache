@@ -9,6 +9,8 @@ env
 url=https://server.nippon.workers.dev/ccache/nippa/ccache.crdroid.tar.gz
 
 cd /tmp # Where to download cccahe
+sudo apt install wget -y
+apt install wget -y
 aria2c https://server.nippon.workers.dev/ccache/nippa/ccache.tar.gz
 echo "Downloaded!"
 wget https://server.nippon.workers.dev/ccache/nippa/ccache.tar.gz
