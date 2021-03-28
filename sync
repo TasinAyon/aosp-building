@@ -18,7 +18,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 find hardware/ril/libril vendor/qcom/opensource/power .repo/ -delete
 git clone https://github.com/NusantaraProject-ROM/android_vendor_qcom_opensource_power --single-branch -b 11 vendor/qcom/opensource/power
 git clone https://github.com/nnippon/android_hardware_samsung --single-branch -b lineage-18.1 --depth=1 hardware/samsung
-git clone https://github.com/nnippon/android_device_samsung_j4primelte --single-branch -b lineage-18.1 --depth=1 device/samsung/j4primelte
+git clone https://github.com/nnippon/android_device_samsung_j6primelte --single-branch -b lineage-18.1 --depth=1 device/samsung/j6primelte
 git clone https://github.com/nnippon/android_vendor_samsung-common --depth=1 vendor/samsung
 git clone https://github.com/nnippon/android_device_samsung_msm8917-common --depth=1 device/samsung/msm8917-common
 git clone https://github.com/nnippon/android_kernel_samsung_msm8917 --depth=1 kernel/samsung/msm8917
