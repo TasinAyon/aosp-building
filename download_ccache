@@ -6,14 +6,11 @@ nproc
 cat /etc/os*
 env
 
-url=https://server.nippon.workers.dev/ccache/nippa/ccache.crdroid.tar.gz
+url=https://server.nippon.workers.dev/ccache/nippa/ccache.tar.gz
+wget https://server.nippon.workers.dev/ccache/nippa/ccache.tar.gz
+aria2c https://server.nippon.workers.dev/ccache/nippa/ccache.tar.gz
 
 cd /tmp # Where to download cccahe
-sudo apt install wget -y
 time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50
-wget https://server.nippon.workers.dev/ccache/nippa/ccache.tar.gz -O a.tar.gz
-echo "Downloaded!"
-
-time tar xf ccache.crdroid.tar.gz
-echo "Extracted!"
-find ccache.crdroid.tar.gz -delete
+time tar xf ccache.tar.gz
+find ccache.tar.gz -delete
