@@ -5,7 +5,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch lineage_j6primelte-userdebug
+lunch aosp_arm64-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -25,8 +25,8 @@ make_metalava(){
 }
 
 make_rom(){
-                mka bacon -j12
-		zip=$(up out/target/product/j6primelte/*zip)
+                WITHOUT_CHECK_API=true make -j14 systemimage
+		zip=$(up out/target/product/generic_arm64/*img)
 		echo " "
 		echo "$zip"
 }
