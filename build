@@ -25,7 +25,7 @@ make_metalava(){
 }
 
 make_rom(){
-                WITHOUT_CHECK_API=true make -j10 systemimage
+                WITHOUT_CHECK_API=true make -j14 systemimage
 		zip=$(up out/target/product/generic_arm64/*img)
 		echo " "
 		echo "$zip"
