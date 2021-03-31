@@ -8,7 +8,7 @@ mkdir -p /tmp/rom
 cd /tmp/rom
 
 # Repo init command, that -device,-mips,-darwin,-notdefault part will save you more time and storage to sync, add more according to your rom and choice. Optimization is welcomed! Let's make it quit, and with depth=1 so that no unnecessary things.
-repo init -u "$MANIFEST" -b "$BRANCH" m "$MANIFEST2" --repo-
+repo init -u "$MANIFEST" -b "$BRANCH" m "$MANIFEST2" --repo- repo-url=git://codeaurora.org/tools/repo.git --repo-branch=caf-stable
 git config --global user.name nnippon
 git config --global user.email adameyyad999@gmail.com
 
