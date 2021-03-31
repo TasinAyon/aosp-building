@@ -12,23 +12,31 @@ export USE_CCACHE=1
 ccache -M 50G
 ccache -o compression=true
 ccache -z
+make api-stubs-docs || echo no problem, we need ccache
+make hiddenapi-lists-docs || echo no problem, we need ccache
+make system-api-stubs-docs || echo no problem we need ccache
+make test-api-stubs-docs || echo no problem, we need ccache
+WITHOUT_CHECK_API=true make -j10 systemimage &
+sleep 60m
+kill %1
+ccache -s
 
 # stuffs
-up(){
-	curl --upload-file $1 https://transfer.sh/
-}
+#up(){
+	#curl --upload-file $1 https://transfer.sh/
+#}
 
-make_metalava(){
-	make api-stubs-docs
-	make system-api-stubs-docs
-	make test-api-stubs-docs
-}
+#make_metalava(){
+	#make api-stubs-docs
+	#make system-api-stubs-docs
+	#make test-api-stubs-docs
+#}
 
-make_rom(){
-                WITHOUT_CHECK_API=true make -j14 systemimage
-		zip=$(up out/target/product/generic_arm64/*img)
-		echo " "
-		echo "$zip"
-}
-make_metalava
-make_rom
+#make_rom(){
+                #WITHOUT_CHECK_API=true make -j10 systemimage
+		#zip=$(up out/target/product/generic_arm64/*img)
+		#echo " "
+		#echo "$zip"
+#}
+#make_metalava
+#make_rom
