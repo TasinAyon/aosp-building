@@ -3,10 +3,10 @@ env: # Environt variable to pass to all tasks
     CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone repo
 
 task:
-    name: nnippon
+    name: ayon
     timeout_in: 120m
     container:
-      image: apon77/aosp:latest
+      image: ayon/aosp:latest
       cpu: 10
       memory: 24G
 #    download_ccache_background_script:
