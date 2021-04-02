@@ -6,7 +6,7 @@ nproc
 cat /etc/os*
 env
 
-#url=https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
+url=https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
 wget https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
 aria2c https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
 
