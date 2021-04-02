@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MANIFEST=https://android.googlesource.com/platform/manifest
-BRANCH=android-11.0.0_r33
+MANIFEST=https://source.codeaurora.org/quic/la
+BRANCH=LA.QSSI.11.0.r1-11100.01-qssi.0
 
 mkdir -p /tmp/rom
 cd /tmp/rom
