@@ -7,8 +7,8 @@ task:
     timeout_in: 120m
     container:
       image: ayon/aosp:latest
-      cpu: 10
-      memory: 24G
+      cpu: 8
+      memory: 32G
 #    download_ccache_background_script:
 #      - ./download_ccache
     sync_script:
