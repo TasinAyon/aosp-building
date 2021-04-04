@@ -3,8 +3,6 @@
 #MANIFEST=https://source.codeaurora.org/quic/la
 #BRANCH=LA.QSSI.11.0.r1-11100.01-qssi.0
 
-sudo apt-get remove -y --purge python3.6
-sudo apt install -y python2
 mkdir -p /tmp/rom
 mkdir -p ~/.repoconfig/gnupg/
 GNUPGHOME=~/.repoconfig/gnupg/ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 692B382C
