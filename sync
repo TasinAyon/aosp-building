@@ -18,7 +18,7 @@ cd /tmp/rom
 #repo init -u "$MANIFEST" -b "$BRANCH"
 sudo apt-get install repo
 repo init
-repo init -u https://source.codeaurora.org/quic/la/la/system/manifest/tree/LA.QSSI.11.0.r1-11100.01-qssi.0.xml -b LA.QSSI.11.0.r1-11100.01-qssi.0
+repo init -u git://codeaurora.org/platform/manifest.git -b LA.QSSI.11.0.r1-11100.01-qssi.0 -m LA.QSSI.11.0.r1-11100.01-qssi.0.xml
 git config --global user.name nnippon
 git config --global user.email adameyyad999@gmail.com
 
