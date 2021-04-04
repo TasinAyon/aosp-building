@@ -1,21 +1,17 @@
 #!/bin/bash
 # Lets see machine specifications and environments
-sudo apt install -y python2
-update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
-update-alternatives: using /usr/bin/python2.7 to provide /usr/bin/python (python) in auto mode
-update-alternatives --config python -1
-#sudo apt-get remove -y --purge python3
-#df -h
-#free -h
-#nproc
-#cat /etc/os*
-#env
+sudo apt-get remove -y --purge python3
+df -h
+free -h
+nproc
+cat /etc/os*
+env
 
-#url=https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
-#wget https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
-#aria2c https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
+url=https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
+wget https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
+aria2c https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
 
-#cd /tmp # Where to download cccahe
-#time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50
-#time tar xf ccache.tar.gz
-#find ccache.tar.gz -delete
+cd /tmp # Where to download cccahe
+time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50
+time tar xf ccache.tar.gz
+find ccache.tar.gz -delete
