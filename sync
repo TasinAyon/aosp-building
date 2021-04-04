@@ -1,11 +1,9 @@
 #!/bin/bash
 
-MANIFEST=https://github.com/TasinAyon/manifest
-BRANCH=ruby
+MANIFEST=git://github.com/omnirom/android.git
+BRANCH=android-11
 
 mkdir -p /tmp/rom
-#mkdir -p ~/.repoconfig/gnupg/
-#GNUPGHOME=~/.repoconfig/gnupg/ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 692B382C
 #mkdir -p ~/bin
 #PATH=~/bin:$PATH
 #curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
@@ -16,7 +14,6 @@ cd /tmp/rom
 
 # Repo init command, that -device,-mips,-darwin,-notdefault part will save you more time and storage to sync, add more according to your rom and choice. Optimization is welcomed! Let's make it quit, and with depth=1 so that no unnecessary things.
 repo init -u "$MANIFEST" -b "$BRANCH"
-#repo init -u git://codeaurora.org/platform/manifest.git -b release -m https://source.codeaurora.org/quic/la/la/system/manifest/tree/LA.QSSI.11.0.r1-11100.01-qssi.0.xml
 git config --global user.name nnippon
 git config --global user.email adameyyad999@gmail.com
 
