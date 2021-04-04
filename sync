@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MANIFEST=https://github.com/TasinAyon/caftest
-BRANCH=main
+MANIFEST=https://github.com/TasinAyon/manifest
+BRANCH=ruby
 
 mkdir -p /tmp/rom
 #mkdir -p ~/.repoconfig/gnupg/
