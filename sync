@@ -3,6 +3,8 @@
 #MANIFEST=https://source.codeaurora.org/quic/la
 #BRANCH=LA.QSSI.11.0.r1-11100.01-qssi.0
 
+sudo apt-get remove -y --purge python3.6
+sudo apt install -y python2
 mkdir -p /tmp/rom
 mkdir -p ~/.repoconfig/gnupg/
 GNUPGHOME=~/.repoconfig/gnupg/ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 692B382C
@@ -12,7 +14,6 @@ GNUPGHOME=~/.repoconfig/gnupg/ gpg --keyserver hkp://pool.sks-keyservers.net --r
 #chmod a+x ~/bin/repo
 #gpg --recv-key 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
 #curl https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ~/bin/repo
-sudo apt install -y python2
 cd /tmp/rom
 
 # Repo init command, that -device,-mips,-darwin,-notdefault part will save you more time and storage to sync, add more according to your rom and choice. Optimization is welcomed! Let's make it quit, and with depth=1 so that no unnecessary things.
