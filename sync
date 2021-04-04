@@ -4,12 +4,12 @@ MANIFEST=git://github.com/omnirom/android.git
 BRANCH=android-11
 
 mkdir -p /tmp/rom
-#mkdir -p ~/bin
-#PATH=~/bin:$PATH
-#curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-#chmod a+x ~/bin/repo
-#gpg --recv-key 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
-#curl https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ~/bin/repo
+mkdir -p ~/bin
+PATH=~/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+gpg --recv-key 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
+curl https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ~/bin/repo
 cd /tmp/rom
 
 # Repo init command, that -device,-mips,-darwin,-notdefault part will save you more time and storage to sync, add more according to your rom and choice. Optimization is welcomed! Let's make it quit, and with depth=1 so that no unnecessary things.
