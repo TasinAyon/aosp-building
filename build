@@ -12,10 +12,10 @@ export USE_CCACHE=1
 ccache -M 50G
 ccache -o compression=true
 ccache -z
-make api-stubs-docs || echo no problem, we need ccache
-make hiddenapi-lists-docs || echo no problem, we need ccache
-make system-api-stubs-docs || echo no problem we need ccache
-make test-api-stubs-docs || echo no problem, we need ccache
+#make api-stubs-docs || echo no problem, we need ccache
+#make hiddenapi-lists-docs || echo no problem, we need ccache
+#make system-api-stubs-docs || echo no problem we need ccache
+#make test-api-stubs-docs || echo no problem, we need ccache
 WITHOUT_CHECK_API=true make -j8 systemimage &
 sleep 60m
 kill %1
