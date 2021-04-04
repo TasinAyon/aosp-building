@@ -19,4 +19,4 @@ git config --global user.email adameyyad999@gmail.com
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
 repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) || repo sync -c --force-sync --no-tags --no-clone-bundle -j8
-git clone https://github.com/TTTT55/vendor_qcom_proprietary/tree/master/llvm-arm-toolchain-ship/8.0 --depth=1 vendor/qcom/proprietary/llvm-arm-toolchain-ship/8.0
+git clone https://github.com/TasinAyon/vendor_qcom_proprietary --depth=1 vendor/qcom/proprietary
