@@ -5,7 +5,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch lavender
+lunch aosp_lavender-eng
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -21,7 +21,7 @@ ccache -z
 #kill %1
 #ccache -s
 
- stuffs
+ #stuffs(dont remove#)
 up(){
 	curl --upload-file $1 https://transfer.sh/
 }
