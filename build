@@ -34,7 +34,7 @@ make_metalava(){
 
 make_rom(){
                 WITHOUT_CHECK_API=true make -j8 systemimage
-		zip=$(up out/target/product/lavender/*zip)
+		zip=$(up out/target/product/generic_arm64/*img)
 		echo " "
 		echo "$zip"
 }
