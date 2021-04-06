@@ -4,10 +4,10 @@ MANIFEST=https://android.googlesource.com/platform/manifest
 BRANCH=android-11.0.0_r34
 
 mkdir -p /tmp/rom
-#mkdir -p ~/bin
-#PATH=~/bin:$PATH
-#curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-#chmod a+x ~/bin/repo
+mkdir -p ~/bin
+PATH=~/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
 #gpg --recv-key 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
 #curl https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ~/bin/repo
 cd /tmp/rom
