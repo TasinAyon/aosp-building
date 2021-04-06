@@ -6,9 +6,9 @@ nproc
 cat /etc/os*
 env
 
-url=https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
-wget https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
-aria2c https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
+url=https://transfer.sh/k0N5x/ccache.tar.gz
+wget https://transfer.sh/k0N5x/ccache.tar.gz
+aria2c https://transfer.sh/k0N5x/ccache.tar.gz
 
 cd /tmp # Where to download cccahe
 time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50
