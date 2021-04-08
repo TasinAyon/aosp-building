@@ -38,7 +38,7 @@ make_rom(){
 		#zip=$(up out/target/product/generic_arm64/*img)
                 zip -r out/target/product/generic_arm64/system.7z out/target/product/generic_arm64/*system*.img
 		curl -sL https://git.io/file-transfer | sh
-		./transfer wet out/target/product/generic_arm64/system.7z  
+		./transfer wet out/target/product/gsi/system.7z  
 		echo " "
 		#echo "$zip"
 }
