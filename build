@@ -27,11 +27,11 @@ ccache -z
 	#curl --upload-file $1 https://transfer.sh/
 #}
 
-make_metalava(){
-	make api-stubs-docs
-	make system-api-stubs-docs
-	make test-api-stubs-docs
-}
+#make_metalava(){
+	#make api-stubs-docs
+	#make system-api-stubs-docs
+	#make test-api-stubs-docs
+#}
 
 make_rom(){
                 WITHOUT_CHECK_API=true make -j8 systemimage
