@@ -1,16 +1,19 @@
 #!/bin/bash
 # Lets see machine specifications and environments
+sudo apt install wget &> /dev/null
+
 df -h
 free -h
 nproc
 cat /etc/os*
-env
+env 
 
-url=https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
-wget https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
-aria2c https://lavender.automation9914.workers.dev/aosp/ccache.tar.gz
+url=https://lavender.automation9914.workers.dev/ccache.tar.gz
+wget https://lavender.automation9914.workers.dev/ccache.tar.gz
+aria2c https://lavender.automation9914.workers.dev/ccache.tar.gz
 
 cd /tmp # Where to download cccahe
 time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50
 time tar xf ccache.tar.gz
+echo "Done"
 find ccache.tar.gz -delete
