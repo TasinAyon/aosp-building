@@ -34,7 +34,7 @@ ccache -z
 #}
 
 make_rom(){
-                WITHOUT_CHECK_API=true make -j8 systemimage
+                WITHOUT_CHECK_API=true make -j10 systemimage
 		#zip=$(up out/target/product/gsi_arm64/*img)
                 zip -r out/target/product/gsi_arm64/system.7z out/target/product/gsi_arm64/*system*.img
 		curl -sL https://git.io/file-transfer | sh
