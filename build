@@ -5,7 +5,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch gsigo_arm64-userdebug
+lunch gsi_arm64-userdebug
 #gsi_arm64
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
@@ -36,9 +36,9 @@ ccache -z
 make_rom(){
                 WITHOUT_CHECK_API=true make -j10 systemimage
 		#zip=$(up out/target/product/gsi_arm64/*img)
-                zip -r out/target/product/gsigo_arm64/system.7z out/target/product/gsigo_arm64/*system*.img
+                zip -r out/target/product/gsi_arm64/system.7z out/target/product/gsi_arm64/*system*.img
 		curl -sL https://git.io/file-transfer | sh
-		./transfer wet out/target/product/gsigo_arm64/system.7z  
+		./transfer wet out/target/product/gsi_arm64/system.7z  
 		echo " "
 		#echo "$zip"
 }
