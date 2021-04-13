@@ -35,12 +35,12 @@ ccache -s
 
 #make_rom(){
                 #WITHOUT_CHECK_API=true make -j10 systemimage
-		-#zip=$(up out/target/product/gsi_arm64/*img)
+		##zip=$(up out/target/product/gsi_arm64/*img)
                 #zip -r out/target/product/gsi_arm64/system.7z out/target/product/gsi_arm64/*system*.img
 		#curl -sL https://git.io/file-transfer | sh
 		#./transfer wet out/target/product/gsi_arm64/system.7z  
 		#echo " "
 		-#echo "$zip"
 #}
--#make_metalava
+##make_metalava
 #make_rom
