@@ -1,13 +1,13 @@
 #!/bin/bash
 
-MANIFEST=https://android.googlesource.com/platform/manifest
-BRANCH=android-11.0.0_r34
+MANIFEST=https://github.com/TasinAyon/manifest
+BRANCH=ruby
 
 mkdir -p /tmp/rom
-#mkdir -p ~/bin
-#PATH=~/bin:$PATH
-#curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-#chmod a+x ~/bin/repo
+mkdir -p ~/bin
+PATH=~/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
 #gpg --recv-key 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
 #curl https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ~/bin/repo
 cd /tmp/rom
@@ -19,4 +19,3 @@ git config --global user.email adameyyad999@gmail.com
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8:(
 repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) || repo sync -c --force-sync --no-tags --no-clone-bundle -j8
-echo '$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)' >> ./build/target/product/gsi_arm64.mk
