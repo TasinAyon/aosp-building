@@ -40,7 +40,7 @@ ccache -s
 		#curl -sL https://git.io/file-transfer | sh
 		#./transfer wet out/target/product/gsi_arm64/system.7z  
 		#echo " "
-		-#echo "$zip"
+		##echo "$zip"
 #}
 ##make_metalava
 #make_rom
