@@ -19,4 +19,4 @@ git config --global user.email adameyyad999@gmail.com
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8:(
 repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) || repo sync -c --force-sync --no-tags --no-clone-bundle -j8
-echo '$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)' ./build/target/product/gsi_arm64.mk
+echo '$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)' >> ./build/target/product/gsi_arm64.mk
