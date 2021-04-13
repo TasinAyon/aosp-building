@@ -17,7 +17,7 @@ repo init -u "$MANIFEST" -b "$BRANCH"
 git config --global user.name nnippon
 git config --global user.email adameyyad999@gmail.com
 
-# Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8:
+# Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8:(
 repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) || repo sync -c --force-sync --no-tags --no-clone-bundle -j8
 git clone https://github.com/TasinAyon/device_xiaomi_lavender --depth=1
 cp gsigo_arm64.mk ./build/target/product
