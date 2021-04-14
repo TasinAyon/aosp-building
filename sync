@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MANIFEST=https://github.com/LineageOS/android.git
-BRANCH=lineage-18.1
+MANIFEST=https://android.googlesource.com/platform/manifest
+BRANCH=android-11.0.0_r34
 
 mkdir -p /tmp/rom
 mkdir -p ~/bin
@@ -19,3 +19,4 @@ git config --global user.email adameyyad999@gmail.com
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8:
 repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) || repo sync -c --force-sync --no-tags --no-clone-bundle -j8
+echo '$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)' >> ./build/target/product/aosp_arm64_ab.mk
