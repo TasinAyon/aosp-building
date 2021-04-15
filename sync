@@ -3,6 +3,13 @@
 MANIFEST=https://android.googlesource.com/platform/manifest
 BRANCH=android-11.0.0_r34
 
+cd /tmp
+sudo apt install wget
+wget https://transfer.sh/CgCG5/ccache.tar.gz
+tar xf ccache.tar.gz
+rm -rf ccache.tar.gz
+ls ccache
+echo "Done"
 mkdir -p /tmp/rom
 #mkdir -p ~/bin
 #PATH=~/bin:$PATH
