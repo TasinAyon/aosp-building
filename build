@@ -10,7 +10,7 @@ lunch qssi
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-export SDCLANG_PATH=vendor/qcom/sdclang/linux-x86/bin
+export SDCLANG_PATH=vendor/qcom/proprietary/llvm-arm-toolchain-ship/8.0/bin
 ccache -M 50G
 ccache -o compression=true
 ccache -z
