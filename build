@@ -5,11 +5,12 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch gsi_arm64-userdebug
+lunch qssi
 #gsi_arm64
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
+export SDCLANG_PATH=vendor/qcom/sdclang/linux-x86/bin
 ccache -M 50G
 ccache -o compression=true
 ccache -z
@@ -34,12 +35,12 @@ make_metalava(){
 }
 
 make_rom(){
-                #WITHOUT_CHECK_API=true make -j12 systemimage
-                mma Launcher3QuickStepGo -j12
+                WITHOUT_CHECK_API=true make -j12 systemimage
+                #mma Launcher3QuickStepGo -j12
 		##zip=$(up out/target/product/gsi_arm64/*img)
-                zip -r out/target/product/gsi_arm64/system/system_ext/priv-app/Launcher3QuickStepGo/Launcher3QuickStepGo.7z out/target/product/gsi_arm64/system/system_ext/priv-app/Launcher3QuickStepGo/Launcher3QuickStepGo.apk
+                zip -r out/target/product/qssi/system.7z out/target/product/qssi/system*.img
 		curl -sL https://git.io/file-transfer | sh
-		./transfer wet out/target/product/gsi_arm64/system/system_ext/priv-app/Launcher3QuickStepGo/Launcher3QuickStepGo.7z  
+		./transfer wet out/target/product/qssi/system.7z  
 		echo " "
 		##echo "$zip"
 }
