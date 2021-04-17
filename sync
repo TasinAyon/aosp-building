@@ -1,15 +1,15 @@
 #!/bin/bash
 
-MANIFEST=https://android.googlesource.com/platform/manifest
-BRANCH=android-11.0.0_r34
+MANIFEST=https://github.com/TasinAyon/manifest
+BRANCH=ruby
 
-cd /tmp
-sudo apt install wget
-wget https://gdmbd.sasohan.workers.dev/ccache.tar.gz
-tar xf ccache.tar.gz
-rm -rf ccache.tar.gz
-ls ccache
-echo "Done"
+#cd /tmp
+#sudo apt install wget
+#wget https://gdmbd.sasohan.workers.dev/ccache.tar.gz
+#tar xf ccache.tar.gz
+#rm -rf ccache.tar.gz
+#ls ccache
+#echo "Done"
 mkdir -p /tmp/rom
 #mkdir -p ~/bin
 #PATH=~/bin:$PATH
@@ -26,6 +26,7 @@ git config --global user.email adameyyad999@gmail.com
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8:(
 repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) || repo sync -c --force-sync --no-tags --no-clone-bundle -j8
-git clone https://github.com/TasinAyon/device_xiaomi_lavender --depth=1 copy/test
-cp ./copy/test/go_defaults_commontest.mk ./build/target/product
-echo '$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults_commontest.mk)' >> ./build/target/product/gsi_arm64.mk
+#git clone https://github.com/TasinAyon/device_xiaomi_lavender --depth=1 copy/test
+#cp ./copy/test/go_defaults_commontest.mk ./build/target/product
+#echo '$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults_commontest.mk)' >> ./build/target/product/gsi_arm64.mk
+git clone https://github.com/TasinAyon/vendor_qcom_proprietary --depth=1 vendor/qcom/proprietary/
