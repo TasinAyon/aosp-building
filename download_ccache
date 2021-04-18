@@ -8,9 +8,9 @@ nproc
 cat /etc/os*
 env 
 
-url=https://gdmbd.sasohan.workers.dev/ccache.tar.gz
-wget https://gdmbd.sasohan.workers.dev/ccache.tar.gz
-aria2c https://gdmbd.sasohan.workers.dev/ccache.tar.gz
+url=https://transfer.sh/kGU6l/ccache.tar.gz
+wget https://transfer.sh/kGU6l/ccache.tar.gz
+aria2c https://transfer.sh/kGU6l/ccache.tar.gz
 
 cd /tmp # Where to download cccahe
 time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50
