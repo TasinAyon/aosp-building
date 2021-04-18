@@ -5,12 +5,11 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch qssi
-#gsi_arm64
+lunch gsi_arm64-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-export SDCLANG_PATH=vendor/qcom/proprietary/llvm-arm-toolchain-ship/8.0/bin
+#export SDCLANG_PATH=vendor/qcom/proprietary/llvm-arm-toolchain-ship/8.0/bin
 ccache -M 50G
 ccache -o compression=true
 ccache -z
@@ -18,7 +17,7 @@ make api-stubs-docs || echo no problem, we need ccache
 make hiddenapi-lists-docs || echo no problem, we need ccache
 make system-api-stubs-docs || echo no problem we need ccache
 make test-api-stubs-docs || echo no problem, we need ccache
-WITHOUT_CHECK_API=true make -j10 systemimage &
+WITHOUT_CHECK_API=true make -j12 systemimage &
 sleep 60m
 kill %1
 ccache -s
