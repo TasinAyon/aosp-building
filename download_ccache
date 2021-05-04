@@ -8,9 +8,9 @@ nproc
 cat /etc/os*
 env 
 
-url=https://transfer.sh/zdRQY/ccache.tar.gz
-wget https://transfer.sh/zdRQY/ccache.tar.gz
-aria2c https://transfer.sh/zdRQY/ccache.tar.gz
+url=https://transfer.sh/7PNgC/ccache.tar.gz
+wget https://transfer.sh/7PNgC/ccache.tar.gz
+aria2c https://transfer.sh/7PNgC/ccache.tar.gz
 
 cd /tmp # Where to download cccahe
 time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50
