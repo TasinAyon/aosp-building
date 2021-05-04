@@ -29,3 +29,6 @@ repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) || repo s
 #git clone https://github.com/TasinAyon/device_xiaomi_lavender --depth=1 copy/test
 #cp ./copy/test/go_defaults_commontest.mk ./build/target/product
 #echo '$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults_commontest.mk)' >> ./build/target/product/gsi_arm64.mk
+echo 'PRODUCT_PACKAGES += \
+    ThemePicker \' >> ./build/target/product/gsi_arm64.mk
+
