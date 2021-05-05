@@ -13,35 +13,35 @@ export USE_CCACHE=1
 ccache -M 50G
 ccache -o compression=true
 ccache -z
-#make api-stubs-docs || echo no problem, we need ccache
-#make hiddenapi-lists-docs || echo no problem, we need ccache
-#make system-api-stubs-docs || echo no problem we need ccache
+make api-stubs-docs || echo no problem, we need ccache
+make hiddenapi-lists-docs || echo no problem, we need ccache
+make system-api-stubs-docs || echo no problem we need ccache
 #make test-api-stubs-docs || echo no problem, we need ccache
-#WITHOUT_CHECK_API=true make -j12 systemimage &
-#sleep 60m
-#kill %1
-#ccache -s
+WITHOUT_CHECK_API=true make -j12 systemimage &
+sleep 60m
+kill %1
+ccache -s
 
  #stuffs(dont remove#)
 #up(){
 	#curl --upload-file $1 https://transfer.sh/
 #}
 
-make_metalava(){
-	make api-stubs-docs
-	make system-api-stubs-docs
-	make test-api-stubs-docs
-}
+#make_metalava(){
+	#make api-stubs-docs
+	#make system-api-stubs-docs
+	#make test-api-stubs-docs
+#}
 
-make_rom(){
-                WITHOUT_CHECK_API=true make -j12 systemimage
+#make_rom(){
+                #WITHOUT_CHECK_API=true make -j12 systemimage
                 #mma Launcher3QuickStepGo -j12
 		##zip=$(up out/target/product/gsi_arm64/*img)
-                zip -r out/target/product/gsi_arm64/system.7z out/target/product/gsi_arm64/system*.img
-		curl -sL https://git.io/file-transfer | sh
-		./transfer wet out/target/product/gsi_arm64/system.7z  
-		echo " "
+                #zip -r out/target/product/gsi_arm64/system.7z out/target/product/gsi_arm64/system*.img
+		#curl -sL https://git.io/file-transfer | sh
+		#./transfer wet out/target/product/gsi_arm64/system.7z  
+		#echo " "
 		##echo "$zip"
-}
-make_metalava
-make_rom
+#}
+#make_metalava
+#make_rom
