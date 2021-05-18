@@ -17,7 +17,7 @@ make api-stubs-docs || echo no problem, we need ccache
 make hiddenapi-lists-docs || echo no problem, we need ccache
 make system-api-stubs-docs || echo no problem we need ccache
 make test-api-stubs-docs || echo no problem, we need ccache
-WITHOUT_CHECK_API=true make -j$(nproc --all) systemimage &
+WITHOUT_CHECK_API=true make systemimage &
 sleep 60m
 kill %1
 ccache -s
