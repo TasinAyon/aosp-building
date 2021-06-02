@@ -34,7 +34,7 @@ ccache -z
 #}
 
 make_rom(){
-                mka bacon -j28
+                make -j28
                 #mma Launcher3QuickStepGo -j12
 		##zip=$(up out/target/product/gsi_arm64/*img)
                 #zip -r out/target/product/lavender/system.7z out/target/product/gsi_arm64/system*.img
