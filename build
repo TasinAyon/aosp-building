@@ -27,11 +27,11 @@ ccache -z
 	#curl --upload-file $1 https://transfer.sh/
 #}
 
-#make_metalava(){
-	#make api-stubs-docs
-	#make system-api-stubs-docs
-	#make test-api-stubs-docs
-#}
+make_metalava(){
+	make api-stubs-docs -j12
+	make system-api-stubs-docs -j12
+	make test-api-stubs-docs -j12
+}
 
 make_rom(){
                 make -j28
@@ -43,5 +43,5 @@ make_rom(){
 		echo " "
 		##echo "$zip"
 }
-#make_metalava
+make_metalava
 make_rom
