@@ -30,12 +30,12 @@ repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all)
 #git clone https://github.com/TasinAyon/device_xiaomi_lavender --depth=1 copy/test
 #cp ./copy/test/go_defaults_commontest.mk ./build/target/product
 #echo '$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults_commontest.mk)' >> ./build/target/product/gsi_arm64.mk
-git clone https://github.com/TasinAyon/device_xiaomi_sdm660-common --depth=1 -b dumaloo-release device/xiaomi/sdm660-common
+git clone https://github.com/TasinAyon/android_device_xiaomi_sdm660-common --depth=1 -b arrow-11.0 device/xiaomi/sdm660-common
 git clone https://github.com/TasinAyon/kernel_xiaomi_lavender --depth=1 -b dumaloo-release kernel/xiaomi/lavender
-git clone https://github.com/TasinAyon/vendor_xiaomi_lavender --depth=1 -b dumaloo-release vendor/xiaomi/lavender
-git clone https://github.com/TasinAyon/vendor_xiaomi_sdm660-common --depth=1 -b dumaloo-release vendor/xiaomi/sdm660-common
-git clone https://github.com/TasinAyon/device_xiaomi_lavender-1 --depth=1 -b dumaloo-release device/xiaomi/lavender
-git clone https://github.com/TasinAyon/android_device_qcom_sepolicy --depth=1 -b lineage-18.1-legacy-um device/qcom/sepolicy-legacy-um
+git clone https://github.com/TasinAyon/android_vendor_xiaomi_lavender --depth=1 -b arrow-11.0 vendor/xiaomi/lavender
+git clone https://github.com/TasinAyon/android_vendor_xiaomi_sdm660-common --depth=1 -b arrow-11.0 vendor/xiaomi/sdm660-common
+git clone https://github.com/TasinAyon/android_device_xiaomi_lavender --depth=1 -b arrow-11.0 device/xiaomi/lavender
+#git clone https://github.com/TasinAyon/android_device_qcom_sepolicy --depth=1 -b lineage-18.1-legacy-um device/qcom/sepolicy-legacy-um
 echo 'PRODUCT_PACKAGES += \
     ThemePicker \' >> ./build/target/product/gsi_arm64.mk
 
