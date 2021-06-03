@@ -38,4 +38,5 @@ git clone https://github.com/TasinAyon/android_device_xiaomi_lavender --depth=1 
 git clone https://github.com/TasinAyon/android_device_qcom_sepolicy --depth=1 -b lineage-18.1-legacy-um device/qcom/sepolicy-legacy-um
 echo 'PRODUCT_PACKAGES += \
     ThemePicker \' >> ./build/target/product/gsi_arm64.mk
+rm -rf ./hardware/qcom/gps
 
