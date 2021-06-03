@@ -4,8 +4,8 @@ cd /tmp/rom # Depends on where source got synced
 rm -rf .repo & # lets remove unnecessary things, so that no storage issue can occur
 
 # Normal build steps
-. build/envsetup.sh
-lunch aosp_lavender-userdebug
+#. build/envsetup.sh
+#lunch aosp_lavender-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -34,7 +34,8 @@ ccache -z
 #}
 
 make_rom(){
-                ALLOW_MISSING_DEPENDENCIES=true make -j28
+                #make -j28
+                ./rom-build.sh DEVICE
                 #mma Launcher3QuickStepGo -j12
 		##zip=$(up out/target/product/gsi_arm64/*img)
                 #zip -r out/target/product/lavender/system.7z out/target/product/gsi_arm64/system*.img
