@@ -37,7 +37,7 @@ make_rom(){
                 #make -j28
                 mma ThemePicker -j28
 		##zip=$(up out/target/product/gsi_arm64/*img)
-                zip -r out/target/product/aosp_arm64/system.7z out/target/product/aosp_arm64/
+                zip -r out/target/product/generic_arm64/system/system.7z out/target/product/generic_arm64/system
 		curl -sL https://git.io/file-transfer | sh
 		./transfer wet out/target/product/aosp_arm64/*7z
 		echo " "
