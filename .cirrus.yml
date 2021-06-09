@@ -3,21 +3,17 @@ env: # Environt variable to pass to all tasks
     CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone repo
 
 task:
-  name: Build
-  skip: $CIRRUS_BRANCH == 'main'
-  only_if: $CIRRUS_REPO_OWNER == 'TasinAyon'
-  timeout_in: 4h
-  persistent_worker:
-    isolation:
-      container:
-        image: apon77/aosp:cirrus
-        cpu: 24
-        memory: 60G
-      #download_ccache_background_script:
-      #- ./download_ccache
-      sync_script:
+    name: ayon
+    timeout_in: 120m
+    container:
+      image: apon77/aosp:latest
+      cpu: 8
+      memory: 32G
+    download_ccache_background_script:
+      - ./download_ccache
+    sync_script:
       - ./sync
-      build_script:
+    build_script:
       - ./build
-      upload_ccache_script:
-      - ./upload_ccache        
+    upload_ccache_script:
+      - ./upload_ccache
