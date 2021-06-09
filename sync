@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MANIFEST=https://android.googlesource.com/platform/manifest/
-BRANCH=android-platform-11.0.0_r6
+MANIFEST=git://github.com/LineageOS/android.git
+BRANCH=lineage-18.1
 
 #cd /tmp
 #sudo apt install wget
@@ -22,7 +22,7 @@ cd /tmp/rom
 # Repo init command, that -device,-mips,-darwin,-notdefault part will save you more time and storage to sync, add more according to your rom and choice. Optimization is welcomed! Let's make it quit, and with depth=1 so that no unnecessary things.
 git config --global user.name nnippon
 git config --global user.email adameyyad999@gmail.com
-repo init -u "$MANIFEST" -b "$BRANCH"
+repo init --depth=1 -u "$MANIFEST" -b "$BRANCH"
 #--depth=1
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8:
 repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) 
@@ -30,12 +30,12 @@ repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all)
 #git clone https://github.com/TasinAyon/device_xiaomi_lavender --depth=1 copy/test
 #cp ./copy/test/go_defaults_commontest.mk ./build/target/product
 #echo '$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults_commontest.mk)' >> ./build/target/product/gsi_arm64.mk
-#git clone https://github.com/TasinAyon/device_xiaomi_sdm660-common --depth=1 -b dumaloo-release device/xiaomi/sdm660-common
-#git clone https://github.com/TasinAyon/kernel_xiaomi_lavender --depth=1 -b dumaloo-release kernel/xiaomi/lavender
-#git clone https://github.com/TasinAyon/vendor_xiaomi_lavender --depth=1 -b dumaloo-release vendor/xiaomi/lavender
-#git clone https://github.com/TasinAyon/vendor_xiaomi_sdm660-common --depth=1 -b dumaloo-release vendor/xiaomi/sdm660-common
-#git clone https://github.com/TasinAyon/device_xiaomi_lavender-1 --depth=1 -b dumaloo-release device/xiaomi/lavender
-#git clone https://github.com/TasinAyon/android_device_qcom_sepolicy --depth=1 -b lineage-18.1-legacy-um device/qcom/sepolicy-legacy-um
+git clone https://github.com/TasinAyon/device_xiaomi_sdm660-common --depth=1 -b dumaloo-release device/xiaomi/sdm660-common
+git clone https://github.com/TasinAyon/kernel_xiaomi_lavender --depth=1 -b dumaloo-release kernel/xiaomi/lavender
+git clone https://github.com/TasinAyon/vendor_xiaomi_lavender --depth=1 -b dumaloo-release vendor/xiaomi/lavender
+git clone https://github.com/TasinAyon/vendor_xiaomi_sdm660-common --depth=1 -b dumaloo-release vendor/xiaomi/sdm660-common
+git clone https://github.com/TasinAyon/device_xiaomi_lavender-1 --depth=1 -b dumaloo-release device/xiaomi/lavender
+git clone https://github.com/TasinAyon/android_device_qcom_sepolicy --depth=1 -b lineage-18.1-legacy-um device/qcom/sepolicy-legacy-um
 #echo 'PRODUCT_PACKAGES += \
     #ThemePicker \' >> ./build/target/product/gsi_arm64.mk
 #rm -rf ./hardware/qcom/gps
