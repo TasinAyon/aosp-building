@@ -4,6 +4,8 @@ env: # Environt variable to pass to all tasks
 
 task:
     name: ayon
+    skip: $CIRRUS_BRANCH == 'main'
+    only_if: $CIRRUS_REPO_OWNER == 'TasinAyon'
     timeout_in: 4h
     persistent_worker:
       isolation:
