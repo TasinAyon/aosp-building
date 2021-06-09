@@ -4,16 +4,18 @@ env: # Environt variable to pass to all tasks
 
 task:
     name: ayon
-    timeout_in: 120m
-    container:
-      image: apon77/aosp:latest
-      cpu: 8
-      memory: 32G
-    download_ccache_background_script:
-      - ./download_ccache
-    sync_script:
-      - ./sync
-    build_script:
-      - ./build
-    upload_ccache_script:
-      - ./upload_ccache
+    timeout_in: 4h
+    persistent_worker:
+      isolation:
+        container:
+          image: apon77/aosp:latest
+          cpu: 8
+          memory: 32G
+        download_ccache_background_script:
+          - ./download_ccache
+        sync_script:
+          - ./sync
+        build_script:
+          - ./build
+        upload_ccache_script:
+          - ./upload_ccache
