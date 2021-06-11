@@ -22,10 +22,12 @@ cd /tmp/rom
 # Repo init command, that -device,-mips,-darwin,-notdefault part will save you more time and storage to sync, add more according to your rom and choice. Optimization is welcomed! Let's make it quit, and with depth=1 so that no unnecessary things.
 git config --global user.name nnippon
 git config --global user.email adameyyad999@gmail.com
-repo init --depth=1 -u "$MANIFEST" -b "$BRANCH"
+#repo init --depth=1 -u "$MANIFEST" -b "$BRANCH"
+repo init --depth=1 --no-repo-verify -u "$MANIFEST" -b "$BRANCH" -g default,-device,-mips,-darwin,-notdefault
 #--depth=1
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8:
-repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) 
+#repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all)
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 
 #|| repo sync -c --force-sync --no-tags --no-clone-bundle -j8
 #git clone https://github.com/TasinAyon/device_xiaomi_lavender --depth=1 copy/test
 #cp ./copy/test/go_defaults_commontest.mk ./build/target/product
