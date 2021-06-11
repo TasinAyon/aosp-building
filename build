@@ -22,7 +22,7 @@ sleep 60m
 kill %1
 ccache -s
 
- #stuffs(dont remove##)
+ #stuffs(dont remove#)
 #up(){
 	#curl --upload-file $1 https://transfer.sh/
 #}
