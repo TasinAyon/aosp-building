@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MANIFEST=..
+MANIFEST=...
 BRANCH=lineage-18.1
 
 #cd /tmp
