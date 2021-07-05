@@ -23,7 +23,7 @@ cd /tmp/rom
 git config --global user.name nnippon
 git config --global user.email adameyyad999@gmail.com
 #repo init --depth=1 -u "$MANIFEST" -b "$BRANCH"
-repo init --depth=1 --no-repo-verify -u https://source.codeaurora.org/quic/la/la/ -b release -g default,-device,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://source.codeaurora.org/quic/la/la/system/manifest/ -b release -g default,-device,-mips,-darwin,-notdefault
 #--depth=1
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8:(
 #repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all)
