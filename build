@@ -17,10 +17,10 @@ ccache -z
 #make hiddenapi-lists-docs || echo no problem, we need ccache
 #make system-api-stubs-docs || echo no problem we need ccache
 #make test-api-stubs-docs || echo no problem, we need ccache
-#make bacon -j35 &
-#sleep 60m
-#kill %1
-#ccache -s
+WITHOUT_CHECK_API=true make -j28 systemimage
+sleep 60m
+kill %1
+ccache -s
 
  #stuffs(dont remove#)
 #up(){
@@ -33,42 +33,15 @@ ccache -z
 	#make test-api-stubs-docs -j12
 #}
 
-make_rom(){
+#make_rom(){
                 #make bacon -j28
-                mma SnapdragonLauncher -j28
-                mma VideoEditor -j28
-                mma SnapdragonGallery -j28
-                mma IM -j28
-                mma SoundRecorder -j28
-                mma SyncProvider -j28
-                mma CalendarProvider -j28
-                mma Updater -j28
-                mma SystemUI -j28
-                mma Sync -j28
-                mma Settings -j28
-                mma QuickSearchBox -j28
-                mma Protips -j28
-                mma Provision -j28
-                mma netutils-wrapper-1.0 -j28
-                mma Music -j28
-                mma LatinIME -j28
-                mma Gallery2 -j28
-                mma Email -j28
-                mma DrmProvider -j28
-                mma CertInstaller -j28
-                mma Camera -j28
-                mma Calendar -j28
-                mma Calculator -j28
-                mma AlarmProvider -j28
-                mma DeskClock -j28
-                mma AccountAndSyncSettings -j28
 		##zip=$(up out/target/product/gsi_arm64/*img)
-                zip -r out/target/product/qssi/system/system.7z out/target/product/qssi/system
+                #zip -r out/target/product/qssi/system/system.7z out/target/product/qssi/system
 		#curl -sL https://git.io/file-transfer | sh
-                curl --upload-file out/target/product/qssi/system/system.7z https://transfer.sh/
+                #curl --upload-file out/target/product/qssi/system/system.7z https://transfer.sh/
 		#./transfer wet out/target/product/aosp_arm64/*7z
-		echo " "
+		#echo " "
 		##echo "$zip"
-}
+#}
 #make_metalava
-make_rom
+#make_rom
